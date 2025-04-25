@@ -1,0 +1,604 @@
+[gd_scene load_steps=30 format=3 uid="uid://c3uwsd67atu6c"]
+
+[ext_resource type="Script" path="res://ampliando/scripts/main.gd" id="1_ictfu"]
+[ext_resource type="Texture2D" uid="uid://ciqtrti4tsntq" path="res://ampliando/assets/objetos/background.png" id="2_y81xh"]
+[ext_resource type="Texture2D" uid="uid://bxvu7ti2ujsjg" path="res://ampliando/assets/objetos/bola_tracado.png" id="4_agvtg"]
+[ext_resource type="Texture2D" uid="uid://cjxmfr2b55847" path="res://ampliando/assets/objetos/bola_teste.png" id="4_vmw27"]
+[ext_resource type="Texture2D" uid="uid://du1sis55g30y1" path="res://ampliando/assets/objetos/traçado.png" id="4_x0wqe"]
+[ext_resource type="Texture2D" uid="uid://dqrrpaiqlqr1m" path="res://ampliando/assets/objetos/diminuir.png" id="5_e4f8e"]
+[ext_resource type="Texture2D" uid="uid://grkr5olfig4" path="res://ampliando/assets/objetos/maça_tracado.png" id="6_51wi6"]
+[ext_resource type="Texture2D" uid="uid://dfjx7b0r06q23" path="res://ampliando/assets/objetos/aumentar.png" id="6_f5ykq"]
+[ext_resource type="Texture2D" uid="uid://c2rk86yip25qv" path="res://ampliando/assets/objetos/maca_teste.png" id="6_lk18a"]
+[ext_resource type="Texture2D" uid="uid://b0wq0mue0ke2c" path="res://ampliando/assets/botoes/buttom.png" id="7_ccaet"]
+[ext_resource type="Texture2D" uid="uid://bv4oa23njcdtj" path="res://ampliando/assets/objetos/estrela_teste.png" id="10_bjhgq"]
+[ext_resource type="Texture2D" uid="uid://4e8ust40ehpf" path="res://ampliando/assets/objetos/quadrado_tracado.png" id="10_ydnkq"]
+[ext_resource type="Texture2D" uid="uid://0iqvrttlgf0s" path="res://ampliando/assets/objetos/quadrado_teste.png" id="12_88g76"]
+[ext_resource type="AudioStream" uid="uid://djgc1ouaq2wu5" path="res://ampliando/assets/sound/MA_RocaMusic_CandyMiners_Loop.ogg" id="14_s6i34"]
+[ext_resource type="AudioStream" uid="uid://bjdcg4jn3isxb" path="res://ampliando/assets/sound/Video Game Jump Sound Effect 1.wav" id="14_ucm70"]
+[ext_resource type="AudioStream" uid="uid://b4sdwljfec142" path="res://ampliando/assets/sound/Video Game Jump Sound Effect 2.wav" id="14_wsaqm"]
+[ext_resource type="Texture2D" uid="uid://ckni56bj5wt0c" path="res://ampliando/assets/botoes/PAUSE.png" id="18_88yv4"]
+[ext_resource type="Texture2D" uid="uid://b82cp3n22vryg" path="res://ampliando/assets/botoes/PLAY.png" id="19_nm06y"]
+[ext_resource type="Texture2D" uid="uid://na5u1avuld8x" path="res://ampliando/assets/botoes/SAIR.png" id="20_qeu0f"]
+[ext_resource type="Texture2D" uid="uid://ckcjpfbbcapok" path="res://ampliando/assets/botoes/RESTART_PAUSE.png" id="21_wa55q"]
+[ext_resource type="Texture2D" uid="uid://girxvcsjb4ft" path="res://ampliando/assets/botoes/pause3.png" id="22_h05r5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55x2k"]
+size = Vector2(396, 918)
+
+[sub_resource type="Animation" id="Animation_06fc4"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteEsquerda:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(259, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteEsquerda:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(540, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteEsquerda:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteEsquerda:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteEsquerda:self_modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteEsquerda:self_modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteEsquerda:self_modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpriteEsquerda:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ifbmv"]
+resource_name = "down"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteEsquerda:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(259, -0.25, 0, 0.25, 0, 259, -0.25, 0, 0.25, 0, 259, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteEsquerda:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(540, -0.25, 0, 0.25, 0, 540, -0.25, 0, 0.25, 0, 540, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteEsquerda:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteEsquerda:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.80678, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteEsquerda:self_modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteEsquerda:self_modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.56, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteEsquerda:self_modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpriteEsquerda:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3aem"]
+_data = {
+"RESET": SubResource("Animation_06fc4"),
+"down": SubResource("Animation_ifbmv")
+}
+
+[sub_resource type="Animation" id="Animation_42t6o"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteDireita:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1678, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteDireita:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(540, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteDireita:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteDireita:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteDireita:self_modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteDireita:self_modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteDireita:self_modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpriteDireita:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_mdufb"]
+resource_name = "direita"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteDireita:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1678, -0.25, 0, 0.25, 0, 1678, -0.25, 0, 0.25, 0, 1678, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteDireita:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(540, -0.25, 0, 0.25, 0, 547, -0.25, 0, 0.25, 0, 540, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteDireita:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteDireita:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.18228, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteDireita:self_modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.17, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteDireita:self_modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.806334, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteDireita:self_modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpriteDireita:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_05kun"]
+_data = {
+"RESET": SubResource("Animation_42t6o"),
+"direita": SubResource("Animation_mdufb")
+}
+
+[sub_resource type="GDScript" id="GDScript_yrgjl"]
+script/source = "extends Button
+
+@onready var pegou = $pegou
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	# Replace with function body.
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	await get_tree().create_timer(0.3).timeout
+	get_tree().change_scene_to_file(\"res://ampliando/scenes/main.tscn\")
+"
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ictfu")
+metadata/_edit_horizontal_guides_ = [519.0]
+metadata/_edit_vertical_guides_ = [954.0]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_y81xh")
+
+[node name="bola_teste" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_vmw27")
+
+[node name="bola_tracado" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+texture = ExtResource("4_agvtg")
+
+[node name="maca_teste" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+scale = Vector2(0.375, 0.377)
+texture = ExtResource("6_lk18a")
+
+[node name="maca_tracado" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+scale = Vector2(1.14301, 1.14301)
+texture = ExtResource("6_51wi6")
+
+[node name="estrela_teste" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("10_bjhgq")
+
+[node name="estrela_tracado" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+scale = Vector2(1.20247, 1.20247)
+texture = ExtResource("4_x0wqe")
+
+[node name="quadrado_teste" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("12_88g76")
+
+[node name="quadrado_tracado" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(954, 519)
+texture = ExtResource("10_ydnkq")
+
+[node name="AreaEsquerda" type="Area2D" parent="."]
+
+[node name="CollisionEsquerda" type="CollisionShape2D" parent="AreaEsquerda"]
+position = Vector2(242, 540)
+shape = SubResource("RectangleShape2D_55x2k")
+
+[node name="SpriteEsquerda" type="Sprite2D" parent="AreaEsquerda"]
+position = Vector2(259, 540)
+texture = ExtResource("5_e4f8e")
+
+[node name="animacao_down" type="AnimationPlayer" parent="AreaEsquerda"]
+libraries = {
+"": SubResource("AnimationLibrary_c3aem")
+}
+autoplay = "down"
+speed_scale = 1.1
+
+[node name="AreaDireita" type="Area2D" parent="."]
+
+[node name="CollisionDireita" type="CollisionShape2D" parent="AreaDireita"]
+position = Vector2(1671, 540)
+shape = SubResource("RectangleShape2D_55x2k")
+
+[node name="SpriteDireita" type="Sprite2D" parent="AreaDireita"]
+position = Vector2(1678, 540)
+texture = ExtResource("6_f5ykq")
+
+[node name="animacao_up" type="AnimationPlayer" parent="AreaDireita"]
+libraries = {
+"": SubResource("AnimationLibrary_05kun")
+}
+autoplay = "direita"
+speed_scale = 1.1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 805.0
+offset_top = 880.0
+offset_right = 1117.0
+offset_bottom = 1004.0
+focus_mode = 0
+icon = ExtResource("7_ccaet")
+flat = true
+script = SubResource("GDScript_yrgjl")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 388.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 96
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_s6i34")
+autoplay = true
+
+[node name="pegou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_ucm70")
+pitch_scale = 1.98
+
+[node name="soltou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_wsaqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+
+[node name="pause_button" type="Button" parent="."]
+offset_left = 917.0
+offset_top = 22.0
+offset_right = 990.0
+offset_bottom = 95.0
+focus_mode = 0
+icon = ExtResource("22_h05r5")
+flat = true
+
+[node name="PAUSE" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PAUSE" type="Sprite2D" parent="PAUSE"]
+position = Vector2(960, 540)
+texture = ExtResource("18_88yv4")
+
+[node name="PLAY_pause" type="Button" parent="PAUSE"]
+process_mode = 3
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 521.0
+offset_right = 1275.0
+offset_bottom = 756.0
+focus_mode = 0
+icon = ExtResource("19_nm06y")
+flat = true
+
+[node name="HOME_pause" type="Button" parent="PAUSE"]
+process_mode = 3
+layout_mode = 0
+offset_left = 646.0
+offset_top = 504.0
+offset_right = 840.0
+offset_bottom = 739.0
+focus_mode = 0
+icon = ExtResource("20_qeu0f")
+flat = true
+
+[node name="RESTART_pause" type="Button" parent="PAUSE"]
+process_mode = 3
+layout_mode = 0
+offset_left = 864.0
+offset_top = 539.0
+offset_right = 1053.0
+offset_bottom = 729.0
+focus_mode = 0
+icon = ExtResource("21_wa55q")
+flat = true
+
+[connection signal="input_event" from="AreaEsquerda" to="." method="_on_area_esquerda_input_event"]
+[connection signal="input_event" from="AreaDireita" to="." method="_on_area_direita_input_event"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="pause_button" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PAUSE/PLAY_pause" to="." method="_on_play_pause_pressed"]
+[connection signal="pressed" from="PAUSE/HOME_pause" to="." method="_on_home_pause_pressed"]
+[connection signal="pressed" from="PAUSE/RESTART_pause" to="." method="_on_restart_pause_pressed"]

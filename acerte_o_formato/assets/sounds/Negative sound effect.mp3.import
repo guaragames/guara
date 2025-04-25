@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk7jel7hjo5qp"
+path="res://.godot/imported/Negative sound effect.mp3-bba51ce458cab4f1c30bb0b7a7f8430f.mp3str"
+
+[deps]
+
+source_file="res://acerte_o_formato/assets/sounds/Negative sound effect.mp3"
+dest_files=["res://.godot/imported/Negative sound effect.mp3-bba51ce458cab4f1c30bb0b7a7f8430f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=281.78
+beat_count=2
+bar_beats=7

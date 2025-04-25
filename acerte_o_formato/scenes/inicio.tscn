@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://d4le4mnp533ba"]
+
+[ext_resource type="Script" path="res://acerte_o_formato/scripts/inicio.gd" id="1_1ub7e"]
+[ext_resource type="Texture2D" uid="uid://x730tqbr7rjf" path="res://acerte_o_formato/assets/fundos_telas/inicio.png" id="2_xvjgi"]
+[ext_resource type="Texture2D" uid="uid://cqvg6g6kqlk01" path="res://acerte_o_formato/assets/botoes/but_inicio.png" id="3_glyai"]
+[ext_resource type="AudioStream" uid="uid://mrphqt25xpp6" path="res://acerte_o_formato/assets/sounds/Video Game Jump Sound Effect 1.wav" id="3_sd5uo"]
+[ext_resource type="Texture2D" uid="uid://ibp4rddvdqpv" path="res://acerte_o_formato/assets/botoes/but_sair.png" id="5_00l33"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vpd6r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7oqh7"]
+load_path = "res://.godot/imported/but_inicio.png-b1f987a44941b065c1d828878c50b711.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5kgx"]
+texture = SubResource("CompressedTexture2D_7oqh7")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhqki"]
+texture = ExtResource("3_glyai")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lieh6"]
+texture = ExtResource("3_glyai")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t20my"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k6uli"]
+texture = ExtResource("5_00l33")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k36ev"]
+texture = ExtResource("5_00l33")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwju6"]
+texture = ExtResource("5_00l33")
+
+[node name="inicio" type="Node2D"]
+script = ExtResource("1_1ub7e")
+
+[node name="fundo" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_xvjgi")
+expand_mode = 1
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_sd5uo")
+
+[node name="botao_iniciar" type="Button" parent="."]
+offset_left = 720.0
+offset_top = 768.0
+offset_right = 969.0
+offset_bottom = 1005.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vpd6r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s5kgx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fhqki")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lieh6")
+
+[node name="botao_sair" type="Button" parent="."]
+offset_left = 991.0
+offset_top = 768.0
+offset_right = 1255.0
+offset_bottom = 1016.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t20my")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k6uli")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k36ev")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nwju6")
+
+[connection signal="pressed" from="botao_iniciar" to="." method="_on_botao_iniciar_pressed"]
+[connection signal="pressed" from="botao_sair" to="." method="_on_botao_sair_pressed"]

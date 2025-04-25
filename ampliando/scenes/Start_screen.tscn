@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://cdxomv7wunddw"]
+
+[ext_resource type="Script" path="res://ampliando/scripts/start_screen.gd" id="1_3a1k1"]
+[ext_resource type="Texture2D" uid="uid://boec5p253d2gh" path="res://ampliando/assets/fundos_telas/fundo.png" id="2_wycu2"]
+[ext_resource type="Texture2D" uid="uid://bbvthxlkhyijq" path="res://ampliando/assets/botoes/iniciar.png" id="3_k82qn"]
+[ext_resource type="Texture2D" uid="uid://nyy5yn3ksc0j" path="res://ampliando/assets/botoes/sair_tela_inicial.png" id="4_h7d3k"]
+[ext_resource type="AudioStream" uid="uid://bjdcg4jn3isxb" path="res://ampliando/assets/sound/Video Game Jump Sound Effect 1.wav" id="5_5qhwh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6gd7c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0fx7"]
+texture = ExtResource("3_k82qn")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fri54"]
+texture = ExtResource("3_k82qn")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wjmb2"]
+texture = ExtResource("3_k82qn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bn2n2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe0vt"]
+texture = ExtResource("4_h7d3k")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rapwm"]
+texture = ExtResource("4_h7d3k")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6l4k"]
+texture = ExtResource("4_h7d3k")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 165.0
+offset_bottom = 181.0
+script = ExtResource("1_3a1k1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_wycu2")
+
+[node name="button_jogar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 744.0
+offset_right = 929.0
+offset_bottom = 1035.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6gd7c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0fx7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fri54")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wjmb2")
+
+[node name="button_sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 994.0
+offset_top = 781.0
+offset_right = 1263.0
+offset_bottom = 1000.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bn2n2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qe0vt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rapwm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_r6l4k")
+
+[node name="user_action" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5qhwh")
+
+[connection signal="pressed" from="button_jogar" to="." method="_on_button_jogar_pressed"]
+[connection signal="pressed" from="button_sair" to="." method="_on_button_sair_pressed"]

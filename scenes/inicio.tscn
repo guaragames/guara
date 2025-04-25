@@ -1,0 +1,147 @@
+[gd_scene load_steps=25 format=3 uid="uid://vekwbmagbk6g"]
+
+[ext_resource type="Script" path="res://inicio.gd" id="1_xo1i1"]
+[ext_resource type="Texture2D" uid="uid://gm2tgr7ic0yf" path="res://assets/fundos_telas/inicio.png" id="2_w272u"]
+[ext_resource type="Texture2D" uid="uid://cbsadq7sqmu3y" path="res://assets/botoes/colete as frutas.png" id="3_2vkx7"]
+[ext_resource type="Texture2D" uid="uid://dbiy2r31tix31" path="res://assets/botoes/ampliando.png" id="4_3ckxd"]
+[ext_resource type="Texture2D" uid="uid://jnex6dwmttp8" path="res://assets/botoes/acerte o formato.png" id="5_ti20a"]
+[ext_resource type="Texture2D" uid="uid://d72bhyqrk7ms" path="res://assets/botoes/conectando silabas.png" id="6_03kxk"]
+[ext_resource type="AudioStream" uid="uid://c4t743flu52ta" path="res://assets/audio/acao_usuario.wav" id="7_glidn"]
+[ext_resource type="AudioStream" uid="uid://ddsee3jd4trxv" path="res://assets/audio/happy-kids-music-292759.mp3" id="8_gn5iv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6gb2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5piej"]
+texture = ExtResource("3_2vkx7")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xmhse"]
+texture = ExtResource("3_2vkx7")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdbkj"]
+texture = ExtResource("3_2vkx7")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_101t6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bymuv"]
+texture = ExtResource("4_3ckxd")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t40s4"]
+texture = ExtResource("4_3ckxd")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7mpu"]
+texture = ExtResource("4_3ckxd")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usi4d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twnyj"]
+texture = ExtResource("5_ti20a")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0225w"]
+texture = ExtResource("5_ti20a")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kr854"]
+texture = ExtResource("5_ti20a")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4j61"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pi5ho"]
+texture = ExtResource("6_03kxk")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7tgsm"]
+texture = ExtResource("6_03kxk")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gpl3s"]
+texture = ExtResource("6_03kxk")
+
+[node name="inicio" type="Node2D"]
+script = ExtResource("1_xo1i1")
+
+[node name="fundo" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_w272u")
+
+[node name="botao_colete_as_frutas" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 540.0
+offset_right = 338.0
+offset_bottom = 790.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w6gb2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5piej")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xmhse")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bdbkj")
+
+[node name="botao_ampliando" type="Button" parent="."]
+offset_left = 571.0
+offset_top = 540.0
+offset_right = 821.0
+offset_bottom = 790.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_101t6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bymuv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t40s4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_t7mpu")
+
+[node name="botao_acerte_o_formato" type="Button" parent="."]
+offset_left = 1054.0
+offset_top = 540.0
+offset_right = 1304.0
+offset_bottom = 790.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_usi4d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_twnyj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0225w")
+theme_override_styles/normal = SubResource("StyleBoxTexture_kr854")
+
+[node name="botao_conectando_silabas" type="Button" parent="."]
+offset_left = 1537.0
+offset_top = 540.0
+offset_right = 1791.0
+offset_bottom = 826.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v4j61")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pi5ho")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7tgsm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gpl3s")
+
+[node name="acao_usuario" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_glidn")
+
+[node name="musica_inicio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_gn5iv")
+volume_db = -15.928
+autoplay = true
+
+[connection signal="pressed" from="botao_colete_as_frutas" to="." method="_on_botao_colete_as_frutas_pressed"]
+[connection signal="pressed" from="botao_ampliando" to="." method="_on_botao_ampliando_pressed"]
+[connection signal="pressed" from="botao_acerte_o_formato" to="." method="_on_botao_acerte_o_formato_pressed"]
+[connection signal="pressed" from="botao_conectando_silabas" to="." method="_on_botao_conectando_silabas_pressed"]
