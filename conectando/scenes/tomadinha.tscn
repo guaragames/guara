@@ -1,0 +1,145 @@
+[gd_scene load_steps=11 format=3 uid="uid://mvsqt31i1muf"]
+
+[ext_resource type="Script" path="res://conectando/scripts/tomadinha.gd" id="1_by5gx"]
+[ext_resource type="Texture2D" uid="uid://4ma3s0nrkte6" path="res://conectando/assets/objetos/tomada.png" id="1_vbqvm"]
+[ext_resource type="AudioStream" uid="uid://cefsr6vq2uwio" path="res://conectando/assets/audios/Video Game Jump Sound Effect 1.wav" id="3_jrshe"]
+[ext_resource type="AudioStream" uid="uid://brib8xcwfb5pf" path="res://conectando/assets/audios/Video Game Jump Sound Effect 2.wav" id="4_dmaxd"]
+[ext_resource type="AudioStream" uid="uid://cltedpvyfuoug" path="res://conectando/assets/audios/Electricity Sound.mp3" id="5_ffsfn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcand"]
+radius = 53.0212
+
+[sub_resource type="Animation" id="Animation_4pqu2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_m8o1m"]
+resource_name = "click_tomada"
+length = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.85, -0.25, 0, 0.25, 0, 1.17, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.85, -0.25, 0, 0.25, 0, 1.17, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.115192, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_ww70e"]
+resource_name = "solta_tomada"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1.17, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1.17, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ulkx3"]
+_data = {
+"RESET": SubResource("Animation_4pqu2"),
+"click_tomada": SubResource("Animation_m8o1m"),
+"solta_tomada": SubResource("Animation_ww70e")
+}
+
+[node name="tomadinha" type="Area2D"]
+script = ExtResource("1_by5gx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vbqvm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0.5)
+shape = SubResource("CircleShape2D_xcand")
+
+[node name="clicou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jrshe")
+
+[node name="soltou" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dmaxd")
+volume_db = -12.0
+
+[node name="click_tomada" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ulkx3")
+}
+
+[node name="cabo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ffsfn")
+volume_db = -16.727
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

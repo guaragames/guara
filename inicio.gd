@@ -29,4 +29,4 @@ func _on_botao_acerte_o_formato_pressed() -> void:
 func _on_botao_conectando_silabas_pressed() -> void:
 	$acao_usuario.play()
 	await get_tree().create_timer(0.15).timeout
-	get_tree().change_scene_to_file("res://conectando_silabas/scenes/start_game.tscn")
+	get_tree().change_scene_to_file("res://conectando/scenes/start_game.tscn")

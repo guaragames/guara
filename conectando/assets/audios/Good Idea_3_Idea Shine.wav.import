@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dk1sj3ym5uep5"
+path="res://.godot/imported/Good Idea_3_Idea Shine.wav-5ebe815dce92e52714ffd77704a8bdfe.sample"
+
+[deps]
+
+source_file="res://conectando/assets/audios/Good Idea_3_Idea Shine.wav"
+dest_files=["res://.godot/imported/Good Idea_3_Idea Shine.wav-5ebe815dce92e52714ffd77704a8bdfe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

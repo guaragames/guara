@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbhtu4rcswl5i"
+path="res://.godot/imported/SOM DE CHOQUE - SHOCK SOUND.mp3-8c16eee46e0387e980cb61fd4bdb195f.mp3str"
+
+[deps]
+
+source_file="res://conectando/assets/audios/SOM DE CHOQUE - SHOCK SOUND.mp3"
+dest_files=["res://.godot/imported/SOM DE CHOQUE - SHOCK SOUND.mp3-8c16eee46e0387e980cb61fd4bdb195f.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=120.0
+beat_count=8
+bar_beats=4

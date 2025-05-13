@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bldgohh0vffo2"]
+
+[ext_resource type="Texture2D" uid="uid://cngc81a4gwsyy" path="res://conectando/assets/objetos/caixaDIREITA.png" id="1_mey2j"]
+[ext_resource type="Texture2D" uid="uid://bxr6t2168eshb" path="res://conectando/assets/objetos/acerto.png" id="3_532na"]
+[ext_resource type="Texture2D" uid="uid://b1g2nqh7jw0ty" path="res://conectando/assets/objetos/erro.png" id="4_8lpnt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hq86f"]
+size = Vector2(127, 127)
+
+[node name="box" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mey2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-63.5, 13.5)
+shape = SubResource("RectangleShape2D_hq86f")
+
+[node name="Label" type="TextureRect" parent="."]
+offset_left = -81.0
+offset_top = -73.0
+offset_right = 98.0
+offset_bottom = 90.0
+expand_mode = 2
+
+[node name="lampada_certa" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(283.9, 14.66)
+scale = Vector2(0.659, 0.659)
+texture = ExtResource("3_532na")
+
+[node name="lampada_errada" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(283.9, 14.66)
+scale = Vector2(0.659, 0.659)
+texture = ExtResource("4_8lpnt")

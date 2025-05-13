@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1qindk0wy251"
+path="res://.godot/imported/Rubber Stretching 3.wav-f5693233c6a35bd986652d93994b0889.sample"
+
+[deps]
+
+source_file="res://conectando/assets/audios/Rubber Stretching 3.wav"
+dest_files=["res://.godot/imported/Rubber Stretching 3.wav-f5693233c6a35bd986652d93994b0889.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

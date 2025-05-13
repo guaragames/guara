@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clb3q63i3fp3x"
-path="res://.godot/imported/inicio.png-dac2bb8613ddaf9c5e3fec7b3e636236.ctex"
+uid="uid://dy43n73oa1onh"
+path="res://.godot/imported/inRED.png-986f4f412090e36edd5d409f77a1b4e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fundos_telas/inicio.png"
-dest_files=["res://.godot/imported/inicio.png-dac2bb8613ddaf9c5e3fec7b3e636236.ctex"]
+source_file="res://conectando/assets/objetos/inRED.png"
+dest_files=["res://.godot/imported/inRED.png-986f4f412090e36edd5d409f77a1b4e2.ctex"]
 
 [params]
 

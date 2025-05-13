@@ -1,0 +1,152 @@
+[gd_scene load_steps=19 format=3 uid="uid://bf0valkd17hx7"]
+
+[ext_resource type="Texture2D" uid="uid://blvdkdrfdnveu" path="res://conectando/assets/fundo.png" id="1_e8e87"]
+[ext_resource type="Script" path="res://conectando/scripts/tela_principal.gd" id="1_g7krc"]
+[ext_resource type="Texture2D" uid="uid://dy43n73oa1onh" path="res://conectando/assets/objetos/inRED.png" id="2_35tan"]
+[ext_resource type="Texture2D" uid="uid://c77uhhrd2ce5s" path="res://conectando/assets/objetos/inBLUE.png" id="3_scgm3"]
+[ext_resource type="Texture2D" uid="uid://taohbw7kw4ix" path="res://conectando/assets/objetos/inYEL.png" id="4_ckkfn"]
+[ext_resource type="Texture2D" uid="uid://ch5d5jx10ijax" path="res://conectando/assets/objetos/outRED.png" id="5_7vfdl"]
+[ext_resource type="Texture2D" uid="uid://hs3c6vucs4dm" path="res://conectando/assets/objetos/outBLUE.png" id="6_hqami"]
+[ext_resource type="Texture2D" uid="uid://dxjvoimkoay83" path="res://conectando/assets/objetos/outYEL.png" id="7_3qsde"]
+[ext_resource type="PackedScene" uid="uid://mvsqt31i1muf" path="res://conectando/scenes/tomadinha.tscn" id="10_3lk4o"]
+[ext_resource type="Texture2D" uid="uid://cv45vey2d4qhk" path="res://conectando/assets/objetos/banana.png" id="11_mgbh6"]
+[ext_resource type="PackedScene" uid="uid://bldgohh0vffo2" path="res://conectando/scenes/box.tscn" id="11_w5sbb"]
+[ext_resource type="Texture2D" uid="uid://dqpaxf6lxc343" path="res://conectando/assets/objetos/dado.png" id="12_sawrv"]
+[ext_resource type="Texture2D" uid="uid://ox73tvcvxdi" path="res://conectando/assets/objetos/faca.png" id="13_plhtt"]
+[ext_resource type="Texture2D" uid="uid://bxr6t2168eshb" path="res://conectando/assets/objetos/acerto.png" id="14_t8q72"]
+[ext_resource type="AudioStream" uid="uid://dk1sj3ym5uep5" path="res://conectando/assets/audios/Good Idea_3_Idea Shine.wav" id="15_5oqop"]
+[ext_resource type="AudioStream" uid="uid://cblwahxjwbbbs" path="res://conectando/assets/audios/MA_RocaMusic_CandyMiners_Loop.ogg" id="16_2l8lr"]
+[ext_resource type="AudioStream" uid="uid://d37ihrwu7p848" path="res://conectando/assets/audios/Duolingo - Sound Effetcs.mp3" id="16_pc6t5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1b304"]
+size = Vector2(239, 847)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g7krc")
+metadata/_edit_vertical_guides_ = [416.0, 1536.0, 1793.0, 573.0]
+metadata/_edit_horizontal_guides_ = [125.0, 365.0, 429.0, 669.0, 736.0, 976.0]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_e8e87")
+
+[node name="cabo_1" type="Line2D" parent="."]
+position = Vector2(536, 240)
+points = PackedVector2Array(-101, 2, 2, 2)
+width = 30.0
+default_color = Color(0.717647, 0.247059, 0, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="cabo_2" type="Line2D" parent="."]
+position = Vector2(536, 546)
+points = PackedVector2Array(-101, 2, 2, 2)
+width = 30.0
+default_color = Color(0.00392157, 0.368627, 0.717647, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="cabo_3" type="Line2D" parent="."]
+position = Vector2(536, 851)
+points = PackedVector2Array(-101, 2, 2, 2)
+width = 30.0
+default_color = Color(0.909804, 0.85098, 0, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="tomadinha3" parent="." instance=ExtResource("10_3lk4o")]
+position = Vector2(535, 851)
+
+[node name="tomadinha2" parent="." instance=ExtResource("10_3lk4o")]
+position = Vector2(536, 548)
+
+[node name="tomadinha" parent="." instance=ExtResource("10_3lk4o")]
+position = Vector2(536, 240)
+
+[node name="outBLUE" type="Sprite2D" parent="."]
+position = Vector2(1663, 247)
+texture = ExtResource("6_hqami")
+
+[node name="outRED" type="Sprite2D" parent="."]
+position = Vector2(1662, 858)
+texture = ExtResource("5_7vfdl")
+
+[node name="outYEL" type="Sprite2D" parent="."]
+position = Vector2(1662, 550)
+texture = ExtResource("7_3qsde")
+
+[node name="box3" parent="." instance=ExtResource("11_w5sbb")]
+position = Vector2(1407, 842)
+
+[node name="box2" parent="." instance=ExtResource("11_w5sbb")]
+position = Vector2(1407, 535)
+
+[node name="box" parent="." instance=ExtResource("11_w5sbb")]
+position = Vector2(1408, 231)
+
+[node name="REDin" type="Area2D" parent="."]
+
+[node name="inBLUE" type="Sprite2D" parent="REDin"]
+position = Vector2(246, 536)
+texture = ExtResource("3_scgm3")
+
+[node name="inRED" type="Sprite2D" parent="REDin"]
+position = Vector2(246, 231)
+texture = ExtResource("2_35tan")
+
+[node name="inYEL" type="Sprite2D" parent="REDin"]
+position = Vector2(246, 842)
+texture = ExtResource("4_ckkfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="REDin"]
+position = Vector2(296.5, 548.5)
+shape = SubResource("RectangleShape2D_1b304")
+
+[node name="BA" type="Sprite2D" parent="."]
+position = Vector2(283, 241)
+scale = Vector2(0.687215, 0.687215)
+texture = ExtResource("11_mgbh6")
+
+[node name="DA" type="Sprite2D" parent="."]
+position = Vector2(294, 551)
+scale = Vector2(0.736989, 0.736989)
+texture = ExtResource("12_sawrv")
+
+[node name="FA" type="Sprite2D" parent="."]
+position = Vector2(299, 850)
+scale = Vector2(0.710317, 0.710317)
+texture = ExtResource("13_plhtt")
+
+[node name="certo1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1691, 247)
+scale = Vector2(0.658537, 0.658537)
+texture = ExtResource("14_t8q72")
+
+[node name="certo2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1691, 550)
+scale = Vector2(0.658537, 0.658537)
+texture = ExtResource("14_t8q72")
+
+[node name="certo3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1691, 858)
+scale = Vector2(0.658537, 0.658537)
+texture = ExtResource("14_t8q72")
+
+[node name="acerto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_5oqop")
+
+[node name="erro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_pc6t5")
+
+[node name="musica_fundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_2l8lr")
+volume_db = -12.364
+autoplay = true
+
+[connection signal="body_entered" from="tomadinha3" to="." method="_on_tomadinha_3_body_entered"]
+[connection signal="body_entered" from="tomadinha2" to="." method="_on_tomadinha_2_body_entered"]
+[connection signal="body_entered" from="tomadinha" to="." method="_on_tomadinha_body_entered"]
+[connection signal="body_entered" from="tomadinha" to="tomadinha2" method="_on_tomadinha_body_entered"]

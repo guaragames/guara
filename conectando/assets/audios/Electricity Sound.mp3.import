@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cltedpvyfuoug"
+path="res://.godot/imported/Electricity Sound.mp3-45334fa594a7ff4d0a3c245c68163119.mp3str"
+
+[deps]
+
+source_file="res://conectando/assets/audios/Electricity Sound.mp3"
+dest_files=["res://.godot/imported/Electricity Sound.mp3-45334fa594a7ff4d0a3c245c68163119.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=120.0
+beat_count=9
+bar_beats=4

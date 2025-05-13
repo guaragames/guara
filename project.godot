@@ -22,7 +22,7 @@ config/icon="res://assets/icon.png"
 AcerteGlobal="*res://acerte_o_formato/scripts/acerte_global.gd"
 ColeteGlobal="*res://colete_as_frutas/scripts/colete_global.gd"
 AmpliandoGlobal="*res://ampliando/scripts/ampliando_global.gd"
-ConectandoGlobal="*res://conectando_silabas/scripts/conectando_global.gd"
+ConectandoGlobal="*res://conectando/scripts/conectando_global.gd"
 
 [display]
 

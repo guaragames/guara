@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clb3q63i3fp3x"
-path="res://.godot/imported/inicio.png-dac2bb8613ddaf9c5e3fec7b3e636236.ctex"
+uid="uid://bxhls6t6p2e6g"
+path="res://.godot/imported/estrela_esquerda.png-c53f51bfc9688a6ffad3f466c74e728a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fundos_telas/inicio.png"
-dest_files=["res://.godot/imported/inicio.png-dac2bb8613ddaf9c5e3fec7b3e636236.ctex"]
+source_file="res://conectando/assets/game_over/estrela_esquerda.png"
+dest_files=["res://.godot/imported/estrela_esquerda.png-c53f51bfc9688a6ffad3f466c74e728a.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://vekwbmagbk6g"]
 
 [ext_resource type="Script" path="res://inicio.gd" id="1_xo1i1"]
-[ext_resource type="Texture2D" uid="uid://gm2tgr7ic0yf" path="res://assets/fundos_telas/inicio.png" id="2_w272u"]
+[ext_resource type="Texture2D" uid="uid://clb3q63i3fp3x" path="res://assets/fundos_telas/inicio.png" id="2_w272u"]
 [ext_resource type="Texture2D" uid="uid://cbsadq7sqmu3y" path="res://assets/botoes/colete as frutas.png" id="3_2vkx7"]
 [ext_resource type="Texture2D" uid="uid://dbiy2r31tix31" path="res://assets/botoes/ampliando.png" id="4_3ckxd"]
 [ext_resource type="Texture2D" uid="uid://jnex6dwmttp8" path="res://assets/botoes/acerte o formato.png" id="5_ti20a"]

@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://cpu3hac67djge"]
+
+[ext_resource type="Script" path="res://conectando/scenes/start_game.gd" id="1_4pr3c"]
+[ext_resource type="Texture2D" uid="uid://vcuhtc15udr" path="res://conectando/assets/fundo_telas/tela_inicial.png" id="2_dvfsu"]
+[ext_resource type="AudioStream" uid="uid://lsxspftukukw" path="res://conectando/assets/audios/Video Game Jump Sound Effect 4.wav" id="4_barwv"]
+[ext_resource type="Texture2D" uid="uid://h4e4ah06fosu" path="res://conectando/assets/botoes/jogar.png" id="4_tsnww"]
+[ext_resource type="Texture2D" uid="uid://dxue57g85vahd" path="res://conectando/assets/botoes/sair.png" id="5_2wtgt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wq732"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vr0ib"]
+texture = ExtResource("4_tsnww")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xinbm"]
+texture = ExtResource("4_tsnww")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mttab"]
+texture = ExtResource("4_tsnww")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkxmr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iboer"]
+texture = ExtResource("5_2wtgt")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3eucj"]
+texture = ExtResource("5_2wtgt")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ul1g"]
+texture = ExtResource("5_2wtgt")
+
+[node name="start_game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4pr3c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_dvfsu")
+
+[node name="acao_usuario" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_barwv")
+volume_db = -5.818
+
+[node name="button_jogar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 659.0
+offset_right = 1239.0
+offset_bottom = 858.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wq732")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vr0ib")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xinbm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mttab")
+
+[node name="button_sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 899.0
+offset_right = 1116.0
+offset_bottom = 1000.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkxmr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iboer")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3eucj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ul1g")
+
+[connection signal="pressed" from="button_jogar" to="." method="_on_button_jogar_pressed"]
+[connection signal="pressed" from="button_sair" to="." method="_on_button_sair_pressed"]
