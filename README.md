@@ -1,24 +1,26 @@
 # 📌 Guará
 
-
-
-> Guará é um launcher gratuito de jogos educativos focados no desenvolvimento da coordenação motora fina.
-
+> Guará é uma plataforma gratuita de jogos educativos focados no desenvolvimento da coordenação motora fina.
 ---
 ## ❓ Sobre
 
 O Guará é destinado a dispositivos móveis e possui 4 jogos:
-* Colete as frutas
-* Ampliando
-* Acerte o formato
-* Conectando sílabas
+* ### Colete as frutas 
+Neste jogo, o jogador move uma cesta de frutas inclinando a tela do celular ou tablet para coletar frutas que caem do topo da tela. O objetivo é coletar o máximo de frutas, sem coletar bombas ou deixar frutas caírem no chão.
 
-O Guará é totalmente gratuito e os assets utilizados nos jogos são [creative commons](https://creativecommons.org/). Qualquer pessoa pode criar sua própria versão do Guará e distribuí-la como bem desejar. Para mais informações, [leia a licença](LICENSE).
+* ### Ampliando
+Em "Ampliando", o jogador realiza o movimento de pinça com os dedos para ampliar uma imagem até que ela preencha uma área demarcada por uma linha tracejada. O objetivo é alcançar o maior número de estrelas, ajustando o tamanho da imagem com precisão.
+* ### Acerte o formato
+Neste jogo, é escolhido aleatoriamente um formato com uma determinada cor. O jogador deve identificar formatos com a mesma característica e tocá-los duas vezes. O objetivo é coletar o máximo de formatos, sem deixar os certos caírem e sem coletar os incorretos.
+* ### Conectando
+Em "Conectando", é apresentado ao jogador três pares de duas imagens. O jogador deve identificar quais são os pares e arrastar o conector da esquerda até a tomada da imagem correspondente na direita. O objetivo é alcançar o maior número de estrelas, realizando corretamente as conexões.
+
+[!TIP] O Guará é totalmente gratuito e os assets utilizados nos jogos são [creative commons](https://creativecommons.org/). Qualquer pessoa pode criar sua própria versão do Guará e distribuí-la como bem desejar. Para mais informações, [leia a licença](LICENSE). 
 
 
 ## 📸 Capturas de Tela
 
-| ![](https://i.imgur.com/rXnBuYP.png) | 
+| ![](https://i.imgur.com/dfmNfan.png) | 
 |:--:| 
 | *Tela inicial do Guará* |
 
@@ -35,9 +37,15 @@ O Guará é totalmente gratuito e os assets utilizados nos jogos são [creative 
 | *Tela do jogo Acerte o formato* |
 
 
-| ![](https://i.imgur.com/aUummRv.png) | 
+| ![](https://i.imgur.com/Xy6rBNL.png) | 
 |:--:| 
-| *Tela do jogo Conectando sílabas* |
+| *Tela do jogo Conectando* |
+
+---
+
+### 💻 Plataformas suportadas
+
+O Guará foi criado para dispositivos móveis. No momento, o suporte é apenas para celulares/tablets Android 8+
 
 ---
 
@@ -81,7 +89,7 @@ Para instalar o Guará em seu dispositivo siga os seguintes passos:
 1. Clone o repositório do Guará em seu computador
 
 ``` bash
-git clone https://github.com/NinoEdu/Guara.git
+git clone https://github.com/guaragames/guara.git
 ```
 
 2. Instale os seguintes requisitos:
@@ -98,7 +106,7 @@ git clone https://github.com/NinoEdu/Guara.git
 
 - [Site oficial do Godot](https://godotengine.org/)
 - [Documentação do Godot](https://docs.godotengine.org/)
-- [Repositório do projeto](https://github.com/NinoEdu/Guara)
+- [Repositório do projeto](https://github.com/guaragames/guara)
 
 ---
 
@@ -110,7 +118,7 @@ Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para m
 
 ## 💡 Créditos
 
-- **Desenvolvedor(es):** Nome(s) dos criadores
+- **Desenvolvedor(es):**
 
 |[Lucas Generoso](https://github.com/olucasz)|[Gabriel Witor](https://github.com/gabrielwitor)|[Rafael Tomaz](https://github.com/RafaelTomazGraciano)
 |:-:|:-:|:-:|
