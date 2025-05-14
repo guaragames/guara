@@ -15,7 +15,7 @@ Neste jogo, é escolhido aleatoriamente um formato com uma determinada cor. O jo
 * ### Conectando
 Em "Conectando", é apresentado ao jogador três pares de duas imagens. O jogador deve identificar quais são os pares e arrastar o conector da esquerda até a tomada da imagem correspondente na direita. O objetivo é alcançar o maior número de estrelas, realizando corretamente as conexões.
 
-[!TIP] O Guará é totalmente gratuito e os assets utilizados nos jogos são [creative commons](https://creativecommons.org/). Qualquer pessoa pode criar sua própria versão do Guará e distribuí-la como bem desejar. Para mais informações, [leia a licença](LICENSE). 
+> O Guará é totalmente gratuito e os assets utilizados nos jogos são [creative commons](https://creativecommons.org/). Qualquer pessoa pode criar sua própria versão do Guará e distribuí-la como bem desejar. Para mais informações, [leia a licença](LICENSE). 
 
 
 ## 📸 Capturas de Tela
